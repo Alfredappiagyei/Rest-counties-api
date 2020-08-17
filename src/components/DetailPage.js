@@ -31,7 +31,7 @@ export default class DetailPage extends Component {
                     country,
                     isLoading: false
                 });
-                country.borders.map(border => {
+                country.borders.forEach(border => {
                     fetch(`https://restcountries.eu/rest/v2/alpha/${border}`)
                         .then(res => {
                             if (res.status >= 400) {
